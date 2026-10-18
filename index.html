@@ -163,7 +163,7 @@ const originalUpdate=update;
 update=function(dt){if(lanRole==='guest')return;originalUpdate(dt);applyRemoteMotion(dt)};
 const originalLoop=loop;
 // Replace scheduled animation loop with the LAN-aware version. Existing first callback still runs once.
-loop=function(now){let dt=now-last;last=now;update(dt);recordReplay();if(!replayPlayback&&replayFrames.length&&celebration===null&&kickoff===null&&replayPendingKickoff){replayPendingKickoff=false;setupKickoff(1-lastGoalTeam);}draw();sendLanState(now);requestAnimationFrame(loop)};
+loop=function(now){let dt=now-last;last=now;update(dt);recordReplay();draw();sendLanState(now);requestAnimationFrame(loop)};
 // Keep red human player out of AI navigation.
 
 document.addEventListener('keydown',e=>{if(lanRole!=='guest')return;let k=e.key.length===1?e.key.toLowerCase():e.key;if(['q','e','f'].includes(k)&&!e.repeat)lanSend({type:'input',keys,action:k==='q'?'switch':k==='e'?'pass':'tackle'});lanSend({type:'input',keys});});
