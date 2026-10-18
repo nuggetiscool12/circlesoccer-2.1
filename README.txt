@@ -1,10 +1,4 @@
-BOUNCE SOCCER 2.1.1 — KICKOFF FIX + ACCESSIBILITY
-
-- Kickoff button handles missing or duplicate team choices, and displays errors
-- Color-vision options and high-contrast mode
-- Touch joystick and mobile action buttons
-- Standard Gamepad API support for Xbox-style controllers
-- Profile photo upload from image file, stored locally in your browser
-- Original gameplay, teams, branding and online room codes retained
-
-Upload all files to GitHub, commit, wait for Render deployment, hard refresh.
+Bounce Soccer 2.1 kickoff repair + recognizable player names.
+Upload all files to GitHub, commit and wait for Render redeploy.
+Kickoff: click Kick Off or pitch; a short center-circle kickoff starts the match.
+Player names: curated recognizable historical/example club lineups, NOT verified current 2026 rosters. Other clubs show club-based fallback names.
